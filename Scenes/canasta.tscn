@@ -1,0 +1,27 @@
+[gd_scene format=3 uid="uid://bke5jm6ax0m2f"]
+
+[ext_resource type="Script" uid="uid://droi4x687dn3x" path="res://Scenes/canasta.gd" id="1_86e3u"]
+[ext_resource type="Texture2D" uid="uid://b201cao380da5" path="res://Sprites/Canasta.png" id="1_hr8kv"]
+[ext_resource type="AudioStream" uid="uid://bekth3f0qeli2" path="res://Audios/Prrs.ogg" id="3_ol8j7"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_86e3u"]
+radius = 59.03389
+
+[node name="Canasta" type="Node2D" unique_id=334488209]
+script = ExtResource("1_86e3u")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=97521670]
+position = Vector2(0, 1)
+scale = Vector2(0.17300557, 0.22954544)
+texture = ExtResource("1_hr8kv")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1420077697]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=419946385]
+shape = SubResource("CircleShape2D_86e3u")
+
+[node name="Prrs" type="AudioStreamPlayer2D" parent="." unique_id=1219008507]
+stream = ExtResource("3_ol8j7")
+volume_db = 14.5
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

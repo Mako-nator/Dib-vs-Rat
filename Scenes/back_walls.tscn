@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://dc6kyyn1kn2pp"]
+
+[ext_resource type="Texture2D" uid="uid://cnsa7ncb2xdrn" path="res://Sprites/pene.png" id="1_j5gdq"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jps8h"]
+size = Vector2(224.84302, 628.96765)
+
+[node name="BackWalls" type="Node2D" unique_id=1698968260]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=880884829]
+position = Vector2(53.750004, 322.5)
+scale = Vector2(0.46860987, 1.0334395)
+texture = ExtResource("1_j5gdq")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Sprite2D" unique_id=1211052989]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D/StaticBody2D" unique_id=1277026397]
+position = Vector2(-0.9214859, 0.48382568)
+shape = SubResource("RectangleShape2D_jps8h")

@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://cxqiag333sdrf"]
+
+[ext_resource type="Texture2D" uid="uid://5c14rd1ltxdl" path="res://Sprites/decoration-colorful-glass-mosaic-art-abstract-wall-background.jpg" id="1_nvnu3"]
+
+[node name="Floor" type="Sprite2D" unique_id=11632491]
+position = Vector2(575.50006, 324.5)
+scale = Vector2(0.32885715, 0.18485714)
+texture = ExtResource("1_nvnu3")

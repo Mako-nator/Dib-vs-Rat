@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://bkpb540se53o8"]
+
+[ext_resource type="Script" uid="uid://boby25vethxb6" path="res://Scenes/rat.gd" id="1_p0vde"]
+[ext_resource type="Texture2D" uid="uid://w12s746ou0q8" path="res://Sprites/Rat sprite.png" id="2_it8n0"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_u217t"]
+size = Vector2(71, 46.5)
+
+[node name="Rat" type="CharacterBody2D" unique_id=135383313]
+script = ExtResource("1_p0vde")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1952164989]
+position = Vector2(1.1920929e-07, 0)
+scale = Vector2(0.11866789, 0.13000003)
+texture = ExtResource("2_it8n0")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=272393997]
+position = Vector2(1, -4.75)
+shape = SubResource("RectangleShape2D_u217t")

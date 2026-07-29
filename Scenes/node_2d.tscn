@@ -1,0 +1,37 @@
+[gd_scene format=3 uid="uid://cb6eaxbgijicf"]
+
+[ext_resource type="Script" uid="uid://b3nyx3kk1jo0w" path="res://Scenes/node_2d.gd" id="1_tx0tn"]
+[ext_resource type="PackedScene" uid="uid://m63gdj61fn4o" path="res://Scenes/dib.tscn" id="1_v1qfn"]
+[ext_resource type="PackedScene" uid="uid://cxqiag333sdrf" path="res://Scenes/floor.tscn" id="2_wjtap"]
+[ext_resource type="PackedScene" uid="uid://dc6kyyn1kn2pp" path="res://Scenes/back_walls.tscn" id="3_6whob"]
+[ext_resource type="PackedScene" uid="uid://bke5jm6ax0m2f" path="res://Scenes/canasta.tscn" id="3_u7krg"]
+[ext_resource type="PackedScene" uid="uid://lj6ejo3a0mqw" path="res://Scenes/back_walls_2.tscn" id="4_6whob"]
+[ext_resource type="PackedScene" uid="uid://4ydqolnw8k3m" path="res://Scenes/header.tscn" id="6_tx0tn"]
+
+[node name="Main" type="Node2D" unique_id=1722751360]
+position = Vector2(268, 23)
+script = ExtResource("1_tx0tn")
+
+[node name="BackWalls" parent="." unique_id=1698968260 instance=ExtResource("3_6whob")]
+position = Vector2(-318, -23)
+
+[node name="BackWalls2" parent="BackWalls" unique_id=165390944 instance=ExtResource("3_6whob")]
+position = Vector2(1125, 0)
+
+[node name="BackWalls 2" parent="BackWalls/BackWalls2" unique_id=1668953512 instance=ExtResource("4_6whob")]
+position = Vector2(-1075, 0)
+
+[node name="BackWalls 3" parent="BackWalls/BackWalls2" unique_id=2114924916 instance=ExtResource("4_6whob")]
+position = Vector2(-1076, 641)
+
+[node name="Floor" parent="." unique_id=11632491 instance=ExtResource("2_wjtap")]
+position = Vector2(297.99997, 297.5)
+scale = Vector2(0.2914286, 0.15571429)
+
+[node name="Header" parent="." unique_id=205979260 instance=ExtResource("6_tx0tn")]
+
+[node name="Canasta" parent="." unique_id=334488209 instance=ExtResource("3_u7krg")]
+position = Vector2(-129, 501)
+
+[node name="Dib" parent="." unique_id=607484123 instance=ExtResource("1_v1qfn")]
+position = Vector2(-126, 275)
