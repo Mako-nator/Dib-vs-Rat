@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://1trwv342sx73"]
+
+[ext_resource type="Script" uid="uid://dwiu82dw8vhrh" path="res://Scenes/angryrat.gd" id="1_d6gtg"]
+[ext_resource type="Texture2D" uid="uid://dfqvkvhrrdeb0" path="res://Sprites/Angry Rat.png" id="2_74pmo"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jps8h"]
+size = Vector2(817.4999, 626.4574)
+
+[node name="Angryrat" type="Node2D" unique_id=978368030]
+script = ExtResource("1_d6gtg")
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="." unique_id=1952211947]
+
+[node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D" unique_id=1929681213]
+position = Vector2(143, 1)
+scale = Vector2(0.24800003, 0.24700002)
+texture = ExtResource("2_74pmo")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D" unique_id=105665521]
+position = Vector2(143, 19.999998)
+scale = Vector2(0.24800003, 0.24700002)
+shape = SubResource("RectangleShape2D_jps8h")

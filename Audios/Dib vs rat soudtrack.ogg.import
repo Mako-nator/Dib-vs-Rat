@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://b3kemdcospjiu"
+path="res://.godot/imported/Dib vs rat soudtrack.ogg-3ae95622d465e0690f11667b65ef981a.oggvorbisstr"
+
+[deps]
+
+source_file="res://Audios/Dib vs rat soudtrack.ogg"
+dest_files=["res://.godot/imported/Dib vs rat soudtrack.ogg-3ae95622d465e0690f11667b65ef981a.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

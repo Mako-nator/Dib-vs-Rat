@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://k5d01o1y2jlu"]
+
+[ext_resource type="Script" uid="uid://boilrnq7say60" path="res://Scenes/music_controller.gd" id="1_vg377"]
+[ext_resource type="AudioStream" uid="uid://b3kemdcospjiu" path="res://Audios/Dib vs rat soudtrack.ogg" id="2_w4kk5"]
+
+[node name="MusicController" type="Node2D" unique_id=159599488]
+script = ExtResource("1_vg377")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=213501917]
+stream = ExtResource("2_w4kk5")
+volume_db = -12.072
+autoplay = true
+parameters/looping = true

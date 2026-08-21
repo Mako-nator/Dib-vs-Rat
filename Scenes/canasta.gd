@@ -4,6 +4,7 @@ extends Node2D
 @onready var sfx_prrs = $Prrs
 
 var score = 0
+var gold_spawned = false
 
 func _ready() -> void:
 	pass 
@@ -15,10 +16,23 @@ func _on_area_2d_body_entered(body):
 	if body == PlayerDib:
 		if PlayerDib.currentObject != null:
 			sfx_prrs.play()
+			
+			if "is_gold_rat" in PlayerDib.currentObject and PlayerDib.currentObject.is_gold_rat:
+				PlayerDib.currentObject.queue_free()
+				PlayerDib.currentObject = null
+	
+				score += 300
+				get_tree().current_scene.gold_spawned = false
+	
+				print(score)
+				return
+			
 			PlayerDib.currentObject.queue_free()
+			PlayerDib.currentObject = null
 			get_tree().current_scene.call_deferred("spawn_rat")
 
-		if body.has_object():
-			body.remove_object()
 			score += 100
 			print(score)
+			
+			if score >= 700 and not get_tree().current_scene.gold_unlocked:
+				get_tree().current_scene.gold_unlocked = true

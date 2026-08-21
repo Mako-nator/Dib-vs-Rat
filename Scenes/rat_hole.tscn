@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://c0txishv1lpgy"]
+
+[ext_resource type="Texture2D" uid="uid://dy31lrjlyvcrq" path="res://Sprites/Rat hole.png" id="1_5rk2m"]
+[ext_resource type="Script" uid="uid://buiim754ivj5l" path="res://Scenes/rat_hole.gd" id="1_xsvn7"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_jps8h"]
+radius = 43.046486
+
+[node name="rat_hole" type="Node2D" unique_id=1473972216]
+script = ExtResource("1_xsvn7")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1593023485]
+position = Vector2(-9.1552734e-05, 1.0000029)
+scale = Vector2(0.202, 0.204)
+texture = ExtResource("1_5rk2m")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=150901496]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=115796499]
+shape = SubResource("CircleShape2D_jps8h")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

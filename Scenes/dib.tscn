@@ -1,21 +1,22 @@
 [gd_scene format=3 uid="uid://m63gdj61fn4o"]
 
 [ext_resource type="Script" uid="uid://cwsnnt5t7pdhj" path="res://Scenes/dib.gd" id="1_e156v"]
-[ext_resource type="Texture2D" uid="uid://c6m0ixsjdpjm6" path="res://Sprites/Dib sprite.png" id="2_tq705"]
+[ext_resource type="Texture2D" uid="uid://lnd7pb0yl7sn" path="res://Sprites/Dib Desing 2.png" id="2_tq705"]
 [ext_resource type="AudioStream" uid="uid://b6haon6377j2m" path="res://Audios/Miaw.ogg" id="3_tq705"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_u217t"]
-size = Vector2(85.5, 90)
+size = Vector2(96, 98)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_jps8h"]
-radius = 46.872166
+radius = 55.03635
 
 [node name="Dib" type="CharacterBody2D" unique_id=607484123]
+texture_filter = 2
 script = ExtResource("1_e156v")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1677726829]
-position = Vector2(0, 1)
-scale = Vector2(0.12374212, 0.114710785)
+texture_filter = 1
+scale = Vector2(0.05585888, 0.054093745)
 texture = ExtResource("2_tq705")
 
 [node name="ObjectMarker" type="Marker2D" parent="Sprite2D" unique_id=559385150]
@@ -26,13 +27,18 @@ scale = Vector2(8.081323, 8.717576)
 shape = SubResource("RectangleShape2D_u217t")
 
 [node name="PickupArea" type="Area2D" parent="." unique_id=1429008259]
+position = Vector2(-1, 0)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="PickupArea" unique_id=36704676]
+texture_filter = 1
+texture_repeat = 2
+position = Vector2(1, 0)
 shape = SubResource("CircleShape2D_jps8h")
 
 [node name="sfx_miaw" type="AudioStreamPlayer2D" parent="." unique_id=746252879]
 stream = ExtResource("3_tq705")
-volume_db = 13.542
+volume_db = 24.0
+max_distance = 4096.0
 
 [connection signal="body_entered" from="PickupArea" to="." method="_on_pickup_area_body_entered"]
 [connection signal="body_exited" from="PickupArea" to="." method="_on_pickup_area_body_exited"]

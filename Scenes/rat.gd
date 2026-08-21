@@ -1,17 +1,18 @@
 extends CharacterBody2D
 class_name GameObject
 
-@export var throwForce = Vector2(150, -300)
+@export var throwForce = Vector2(100, -300)
 
 @onready var collision_shape2d: CollisionShape2D = $CollisionShape2D
 
-const SPEED = 300.0
+var is_gold_rat = false
+var speed = 200.0
 
 var direction = 1
 var health = 1
 
 func move_enemy():
-	velocity.x = SPEED * direction
+	velocity.x = speed * direction
 	
 
 func reverse_direction():

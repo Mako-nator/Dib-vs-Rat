@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://bhd1j3lojw1gs" path="res://header.gd" id="1_uk1ny"]
 
 [sub_resource type="SystemFont" id="SystemFont_wjd03"]
+subpixel_positioning = 0
 
 [node name="Header" type="Control" unique_id=205979260]
 layout_mode = 3
@@ -17,10 +18,10 @@ layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -134.0
-offset_top = 47.0
-offset_right = 48.0
-offset_bottom = 88.0
+offset_left = -158.0
+offset_top = 17.0
+offset_right = 24.0
+offset_bottom = 58.0
 grow_horizontal = 2
 
 [node name="Score" type="Label" parent="HBoxContainer" unique_id=351545878]

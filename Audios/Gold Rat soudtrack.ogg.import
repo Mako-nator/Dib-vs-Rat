@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://dtcgb8wuwvxw8"
+path="res://.godot/imported/Gold Rat soudtrack.ogg-a33166e427d9e0bddd40e8b57f5d121b.oggvorbisstr"
+
+[deps]
+
+source_file="res://Audios/Gold Rat soudtrack.ogg"
+dest_files=["res://.godot/imported/Gold Rat soudtrack.ogg-a33166e427d9e0bddd40e8b57f5d121b.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

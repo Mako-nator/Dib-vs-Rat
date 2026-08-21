@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://b8ihb0r1lpxyi"]
+
+[ext_resource type="Script" uid="uid://da5dghv30435q" path="res://Scenes/goldrat.gd" id="1_ns35l"]
+[ext_resource type="Texture2D" uid="uid://boiqfc70yt81d" path="res://Sprites/gold rat.png" id="2_fww7b"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jps8h"]
+size = Vector2(195.02509, 168.1524)
+
+[node name="Goldrat" type="Node2D" unique_id=1730230220]
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="." unique_id=421414709]
+script = ExtResource("1_ns35l")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D" unique_id=2124533171]
+position = Vector2(42, -1.9999981)
+scale = Vector2(0.37350002, 0.35349998)
+shape = SubResource("RectangleShape2D_jps8h")
+
+[node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D" unique_id=1025145987]
+position = Vector2(41.406242, -7.093749)
+scale = Vector2(0.07118752, 0.070187494)
+texture = ExtResource("2_fww7b")
