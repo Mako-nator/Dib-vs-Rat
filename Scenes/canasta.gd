@@ -9,7 +9,7 @@ var gold_spawned = false
 func _ready() -> void:
 	pass 
 	
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	pass
 	
 func _on_area_2d_body_entered(body):

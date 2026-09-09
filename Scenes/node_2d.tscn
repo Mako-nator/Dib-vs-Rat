@@ -14,35 +14,43 @@ position = Vector2(268, 23)
 script = ExtResource("1_tx0tn")
 
 [node name="GoldRatTimer" type="Timer" parent="." unique_id=200354907]
-wait_time = 20.0
+wait_time = 16.312
+autostart = true
+
+[node name="AngryRatTimer" type="Timer" parent="." unique_id=745646408]
+wait_time = 40.849
 autostart = true
 
 [node name="BackWalls" parent="." unique_id=1698968260 instance=ExtResource("3_6whob")]
-position = Vector2(-358, -31)
+position = Vector2(-360, -33)
 
 [node name="BackWalls2" parent="BackWalls" unique_id=165390944 instance=ExtResource("3_6whob")]
-position = Vector2(1226, 10)
+position = Vector2(1226, 5)
 
-[node name="BackWalls 2" parent="BackWalls/BackWalls2" unique_id=1668953512 instance=ExtResource("4_6whob")]
-position = Vector2(-1136, -33)
+[node name="BackWalls 2" parent="BackWalls" unique_id=1668953512 instance=ExtResource("4_6whob")]
+position = Vector2(97, -22)
 
-[node name="BackWalls 3" parent="BackWalls/BackWalls2" unique_id=2114924916 instance=ExtResource("4_6whob")]
-position = Vector2(-1137, 668)
+[node name="BackWalls 3" parent="BackWalls" unique_id=2114924916 instance=ExtResource("4_6whob")]
+position = Vector2(91, 680)
 
 [node name="Floor" parent="." unique_id=11632491 instance=ExtResource("2_wjtap")]
-position = Vector2(307, 296.50003)
+position = Vector2(306, 296.00003)
 scale = Vector2(0.32057142, 0.17285717)
 
 [node name="Header" parent="." unique_id=205979260 instance=ExtResource("6_tx0tn")]
-offset_left = -1.0
+offset_left = 281.0
+offset_top = -22.0
+offset_right = 282.0
+offset_bottom = -22.0
 
 [node name="Canasta" parent="." unique_id=334488209 instance=ExtResource("3_u7krg")]
 position = Vector2(-166, 537)
 
-[node name="rat_hole" parent="." unique_id=1473972216 instance=ExtResource("8_v7gqg")]
-position = Vector2(746, 103)
-
 [node name="Dib" parent="." unique_id=607484123 instance=ExtResource("1_v1qfn")]
 position = Vector2(-126, 275)
 
+[node name="rat_hole" parent="." unique_id=1473972216 instance=ExtResource("8_v7gqg")]
+position = Vector2(746, 103)
+
 [connection signal="timeout" from="GoldRatTimer" to="." method="_on_gold_rat_timer_timeout"]
+[connection signal="timeout" from="AngryRatTimer" to="." method="_on_angry_rat_timer_timeout"]

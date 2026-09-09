@@ -4,9 +4,13 @@ extends CharacterBody2D
 
 @onready var sfx_miaw = $sfx_miaw
 
+@onready var heart1: TextureRect =  $"../Header/Lives/heart 1"
+@onready var heart2: TextureRect =  $"../Header/Lives/heart 2"
+@onready var heart3: TextureRect =  $"../Header/Lives/heart 3"
+
+var lives = 3
 
 const SPEED = 300.0
-
 var possiblePickupObjects = []
 var currentObject
 
@@ -17,6 +21,7 @@ func _input(_event: InputEvent) -> void:
 		throw_object()
 	elif Input.is_action_just_pressed("ui_pickup") and possiblePickupObjects:
 		pickup_object()
+		 
 
 	
 func throw_object():
@@ -26,6 +31,9 @@ func throw_object():
 		currentObject.get_node("CollisionShape2D").disabled = false
 		currentObject.global_position = global_position
 		currentObject = null
+		
+		perder_vida()
+		
 		return
 
 	currentObject.reparent(get_tree().current_scene)
@@ -75,7 +83,16 @@ func _physics_process(_delta: float) -> void:
 	velocity = direction  * SPEED
 	move_and_slide()
 	
-	
+func perder_vida():
+	lives -= 1
+	print("Vidas:", lives)
+	if lives == 2:
+		heart3.texture = preload("res://Sprites/Heartless.png")
+	elif lives == 1:
+		heart2.texture = preload("res://Sprites/Heartless.png")
+	elif lives == 0:
+		heart1.texture = preload("res://Sprites/Heartless.png")
+		get_tree().call_deferred("change_scene_to_file","res://Scenes/game_over.tscn")
 
 
 func _on_pickup_area_body_entered(body: Node2D) -> void:

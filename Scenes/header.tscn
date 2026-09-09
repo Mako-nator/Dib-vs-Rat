@@ -1,9 +1,16 @@
 [gd_scene format=3 uid="uid://4ydqolnw8k3m"]
 
 [ext_resource type="Script" uid="uid://bhd1j3lojw1gs" path="res://header.gd" id="1_uk1ny"]
+[ext_resource type="Texture2D" uid="uid://cxh3v3353kk5d" path="res://Sprites/Heart.png" id="2_n8ka5"]
 
 [sub_resource type="SystemFont" id="SystemFont_wjd03"]
 subpixel_positioning = 0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_u217t"]
+size = Vector2(91, 32)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jps8h"]
+size = Vector2(182, 48)
 
 [node name="Header" type="Control" unique_id=205979260]
 layout_mode = 3
@@ -15,14 +22,10 @@ script = ExtResource("1_uk1ny")
 
 [node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=1967587996]
 layout_mode = 1
-anchors_preset = 5
-anchor_left = 0.5
-anchor_right = 0.5
-offset_left = -158.0
-offset_top = 17.0
-offset_right = 24.0
-offset_bottom = 58.0
-grow_horizontal = 2
+offset_left = -465.0
+offset_top = 49.0
+offset_right = -283.0
+offset_bottom = 90.0
 
 [node name="Score" type="Label" parent="HBoxContainer" unique_id=351545878]
 layout_mode = 2
@@ -38,3 +41,36 @@ theme_override_colors/font_color = Color(0.026160505, 0.026160505, 0.026160505, 
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 17
 text = "0"
+
+[node name="StaticBody2D" type="StaticBody2D" parent="HBoxContainer" unique_id=353128396]
+position = Vector2(26, 10)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HBoxContainer/StaticBody2D" unique_id=2000733122]
+position = Vector2(2.5, 11)
+shape = SubResource("RectangleShape2D_u217t")
+
+[node name="Lives" type="HBoxContainer" parent="." unique_id=629204008]
+layout_mode = 0
+offset_left = 352.0
+offset_top = 547.0
+offset_right = 552.0
+offset_bottom = 611.0
+
+[node name="heart 1" type="TextureRect" parent="Lives" unique_id=2069816557]
+layout_mode = 2
+texture = ExtResource("2_n8ka5")
+
+[node name="heart 2" type="TextureRect" parent="Lives" unique_id=905536862]
+layout_mode = 2
+texture = ExtResource("2_n8ka5")
+
+[node name="heart 3" type="TextureRect" parent="Lives" unique_id=42142048]
+layout_mode = 2
+texture = ExtResource("2_n8ka5")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Lives" unique_id=1455229434]
+position = Vector2(96, 34)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Lives/StaticBody2D" unique_id=1693272305]
+position = Vector2(5, -4)
+shape = SubResource("RectangleShape2D_jps8h")

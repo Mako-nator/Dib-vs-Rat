@@ -24,6 +24,10 @@ MusicController="*uid://k5d01o1y2jlu"
 window/stretch/mode="canvas_items"
 window/stretch/aspect="expand"
 
+[editor]
+
+version_control/autoload_on_startup=true
+
 [input]
 
 ui_pickup={
