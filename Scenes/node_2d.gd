@@ -11,9 +11,10 @@ var angry_rat_spawned = false
 var angry_unlocked = true
 
 func _ready():
+	Global.current_score = 0
 	for i in range(3):
 		spawn_rat()
-	MusicController.bgm_play()
+	MusicController.bgm_play(preload("res://Audios/Dib vs rat soudtrack.ogg"))
 		
 func spawn_rat():
 	var rat = Rat_scene.instantiate()

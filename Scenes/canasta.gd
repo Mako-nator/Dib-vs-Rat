@@ -3,7 +3,6 @@ extends Node2D
 @onready var PlayerDib: CharacterBody2D =  $"../Dib"
 @onready var sfx_prrs = $Prrs
 
-var score = 0
 var gold_spawned = false
 
 func _ready() -> void:
@@ -21,18 +20,18 @@ func _on_area_2d_body_entered(body):
 				PlayerDib.currentObject.queue_free()
 				PlayerDib.currentObject = null
 	
-				score += 300
+				Global.current_score += 300
 				get_tree().current_scene.gold_spawned = false
 	
-				print(score)
+				print(Global.current_score)
 				return
 			
 			PlayerDib.currentObject.queue_free()
 			PlayerDib.currentObject = null
 			get_tree().current_scene.call_deferred("spawn_rat")
 
-			score += 100
-			print(score)
+			Global.current_score += 100
+			print(Global.current_score)
 			
-			if score >= 700 and not get_tree().current_scene.gold_unlocked:
+			if Global.current_score >= 700 and not get_tree().current_scene.gold_unlocked:
 				get_tree().current_scene.gold_unlocked = true

@@ -1,6 +1,8 @@
 [gd_scene format=3 uid="uid://c6dwqjp7elowa"]
 
 [ext_resource type="Script" uid="uid://b0usie1d5aunx" path="res://Scenes/game_over.gd" id="1_ojehl"]
+[ext_resource type="FontFile" uid="uid://cokva70ovojhs" path="res://Fonts/Butcherman-Regular.ttf" id="2_ek8ke"]
+[ext_resource type="FontFile" uid="uid://cgiwccciweygh" path="res://Fonts/Chewy-Regular.ttf" id="3_eoghk"]
 
 [node name="Game_over" type="ColorRect" unique_id=1271919033]
 offset_right = 1153.0
@@ -12,22 +14,52 @@ script = ExtResource("1_ojehl")
 texture_filter = 5
 texture_repeat = 1
 layout_mode = 1
-offset_left = 94.0
-offset_top = 134.0
-offset_right = 976.0
-offset_bottom = 345.0
-theme_override_font_sizes/font_size = 154
+offset_left = 164.0
+offset_top = 3.0
+offset_right = 965.0
+offset_bottom = 333.0
+theme_override_fonts/font = ExtResource("2_ek8ke")
+theme_override_font_sizes/font_size = 170
 text = "Game over"
 vertical_alignment = 1
 uppercase = true
 
 [node name="Button" type="Button" parent="." unique_id=1679687258]
 layout_mode = 0
-offset_left = 466.0
-offset_top = 408.0
-offset_right = 647.0
-offset_bottom = 508.0
+offset_left = 184.0
+offset_top = 491.0
+offset_right = 365.0
+offset_bottom = 591.0
+theme_override_fonts/font = ExtResource("3_eoghk")
 theme_override_font_sizes/font_size = 67
 text = "Retry"
+
+[node name="Menuprincipal" type="Button" parent="." unique_id=1388960611]
+layout_mode = 0
+offset_left = 816.0
+offset_top = 491.0
+offset_right = 997.0
+offset_bottom = 591.0
+theme_override_fonts/font = ExtResource("3_eoghk")
+theme_override_font_sizes/font_size = 67
+text = "Menu"
+
+[node name="ScoreLabel" type="Label" parent="." unique_id=76351043]
+layout_mode = 0
+offset_left = 482.0
+offset_top = 386.0
+offset_right = 638.0
+offset_bottom = 458.0
+theme_override_fonts/font = ExtResource("3_eoghk")
+theme_override_font_sizes/font_size = 30
+
+[node name="HighScoreLabel" type="Label" parent="." unique_id=1818807244]
+layout_mode = 0
+offset_left = 447.0
+offset_top = 305.0
+offset_right = 687.0
+offset_bottom = 377.0
+theme_override_fonts/font = ExtResource("3_eoghk")
+theme_override_font_sizes/font_size = 30
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

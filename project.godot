@@ -11,18 +11,18 @@ config_version=5
 [application]
 
 config/name="Dib Vs Rat"
-run/main_scene="uid://cb6eaxbgijicf"
+run/main_scene="uid://1d1ym3qxpl5"
 config/features=PackedStringArray("4.7", "Forward Plus")
-config/icon="res://icon.svg"
+config/icon="uid://cywuq48wdbs0j"
 
 [autoload]
 
 MusicController="*uid://k5d01o1y2jlu"
+Global="*uid://b8lgqp5r3vedl"
 
 [display]
 
 window/stretch/mode="canvas_items"
-window/stretch/aspect="expand"
 
 [editor]
 

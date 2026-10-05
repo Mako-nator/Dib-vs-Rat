@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://b5xuc5ywgkar0"
+path="res://.godot/imported/Menu soudtrack.ogg-566311bc9250bf3182959c3e134034ab.oggvorbisstr"
+
+[deps]
+
+source_file="res://Audios/Menu soudtrack.ogg"
+dest_files=["res://.godot/imported/Menu soudtrack.ogg-566311bc9250bf3182959c3e134034ab.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

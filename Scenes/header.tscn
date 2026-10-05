@@ -1,13 +1,11 @@
 [gd_scene format=3 uid="uid://4ydqolnw8k3m"]
 
-[ext_resource type="Script" uid="uid://bhd1j3lojw1gs" path="res://header.gd" id="1_uk1ny"]
+[ext_resource type="Script" uid="uid://bhd1j3lojw1gs" path="res://Scenes/header.gd" id="1_uk1ny"]
 [ext_resource type="Texture2D" uid="uid://cxh3v3353kk5d" path="res://Sprites/Heart.png" id="2_n8ka5"]
-
-[sub_resource type="SystemFont" id="SystemFont_wjd03"]
-subpixel_positioning = 0
+[ext_resource type="FontFile" uid="uid://cgiwccciweygh" path="res://Fonts/Chewy-Regular.ttf" id="2_qdf8y"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_u217t"]
-size = Vector2(91, 32)
+size = Vector2(116, 32)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_jps8h"]
 size = Vector2(182, 48)
@@ -29,24 +27,26 @@ offset_bottom = 90.0
 
 [node name="Score" type="Label" parent="HBoxContainer" unique_id=351545878]
 layout_mode = 2
-theme_override_colors/font_color = Color(0.012617188, 0.012617188, 0.012617188, 1)
-theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = SubResource("SystemFont_wjd03")
-theme_override_font_sizes/font_size = 12
+theme_override_constants/outline_size = 9
+theme_override_fonts/font = ExtResource("2_qdf8y")
+theme_override_font_sizes/font_size = 18
 text = "Score: "
 
 [node name="Contador" type="Label" parent="HBoxContainer" unique_id=334086441]
 layout_mode = 2
-theme_override_colors/font_color = Color(0.026160505, 0.026160505, 0.026160505, 1)
-theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 17
+theme_override_constants/line_spacing = 3
+theme_override_constants/paragraph_spacing = -2
+theme_override_constants/outline_size = 8
+theme_override_constants/shadow_outline_size = 3
+theme_override_fonts/font = ExtResource("2_qdf8y")
+theme_override_font_sizes/font_size = 22
 text = "0"
 
 [node name="StaticBody2D" type="StaticBody2D" parent="HBoxContainer" unique_id=353128396]
 position = Vector2(26, 10)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="HBoxContainer/StaticBody2D" unique_id=2000733122]
-position = Vector2(2.5, 11)
+position = Vector2(15, 11)
 shape = SubResource("RectangleShape2D_u217t")
 
 [node name="Lives" type="HBoxContainer" parent="." unique_id=629204008]

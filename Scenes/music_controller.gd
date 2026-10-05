@@ -2,9 +2,9 @@ extends Node2D
 
 @onready var audio_stream_player: AudioStreamPlayer = $AudioStreamPlayer
 
-func _ready():
-	bgm_play()
-
-func bgm_play():
-	audio_stream_player.stream = preload("res://Audios/Dib vs rat soudtrack.ogg")
+func bgm_play(cancion: AudioStream) -> void:
+	audio_stream_player.stream = cancion
 	audio_stream_player.play()
+
+func bgm_stop():
+	audio_stream_player.stop()

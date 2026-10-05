@@ -2,6 +2,8 @@
 
 [ext_resource type="Script" uid="uid://boilrnq7say60" path="res://Scenes/music_controller.gd" id="1_vg377"]
 [ext_resource type="AudioStream" uid="uid://b3kemdcospjiu" path="res://Audios/Dib vs rat soudtrack.ogg" id="2_w4kk5"]
+[ext_resource type="AudioStream" uid="uid://b5xuc5ywgkar0" path="res://Audios/Menu soudtrack.ogg" id="3_e3i35"]
+[ext_resource type="AudioStream" uid="uid://c5qfl3g5c3yaj" path="res://Audios/Game over.ogg" id="4_eir81"]
 
 [node name="MusicController" type="Node2D" unique_id=159599488]
 script = ExtResource("1_vg377")
@@ -9,5 +11,12 @@ script = ExtResource("1_vg377")
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=213501917]
 stream = ExtResource("2_w4kk5")
 volume_db = -12.072
-autoplay = true
 parameters/looping = true
+
+[node name="Menu_music" type="AudioStreamPlayer" parent="." unique_id=111841726]
+stream = ExtResource("3_e3i35")
+volume_db = 24.0
+
+[node name="Gameover_music" type="AudioStreamPlayer" parent="." unique_id=1282743067]
+stream = ExtResource("4_eir81")
+volume_db = 24.0
